@@ -37,12 +37,30 @@ const colors = {
     backgroundColor: "#265b85",
   },
   1: {
-    backgroundColor: "#3384af",
+    backgroundColor: "#295b99",
   },
   2: {
-    backgroundColor: "#66bcea",
+    backgroundColor: "#3177af",
   },
   3: {
+    backgroundColor: "#3384af",
+  },
+  4: {
+    backgroundColor: "#43bcea",
+  },
+  5: {
+    backgroundColor: "#66bcea",
+  },
+  6: {
+    backgroundColor: "#86bceb",
+  },
+  7: {
+    backgroundColor: "#a0bcdd",
+  },
+  8: {
+    backgroundColor: "#c0cbde",
+  },
+  9: {
     backgroundColor: "#e0e1de",
   },
 };
@@ -50,12 +68,18 @@ const colors = {
 const headerSize = {
   small: {
     fontSize: "20px",
+    [mq.xsmall]: {
+      fontSize: "18px",
+    },
     [mq.large]: {
       fontSize: "32px",
     },
   },
   big: {
     fontSize: "24px",
+    [mq.xsmall]: {
+      fontSize: "20px",
+    },
     [mq.large]: {
       fontSize: "39px",
     },
@@ -94,24 +118,36 @@ const CurrentStatus = styled.div(
 const resultSize = {
   small: {
     fontSize: "18px",
+    [mq.xsmall]: {
+      fontSize: "18px",
+    },
     [mq.large]: {
       fontSize: "32px",
     },
   },
   normal: {
     fontSize: "23px",
+    [mq.xsmall]: {
+      fontSize: "20px",
+    },
     [mq.large]: {
       fontSize: "50px",
     },
   },
   big: {
     fontSize: "38px",
+    [mq.xsmall]: {
+      fontSize: "24px",
+    },
     [mq.large]: {
       fontSize: "70px",
     },
   },
   large: {
     fontSize: "42px",
+    [mq.xsmall]: {
+      fontSize: "30px",
+    },
     [mq.large]: {
       fontSize: "86px",
     },
@@ -131,18 +167,28 @@ const ResultValue = styled.p(
 const percentSize = {
   small: {
     fontSize: "17px",
+    [mq.xsmall]: {
+      fontSize: "15px",
+    },
     [mq.large]: {
       fontSize: "28px",
     },
   },
   normal: {
     fontSize: "20px",
+    [mq.xsmall]: {
+      fontSize: "18px",
+    },
+
     [mq.large]: {
       fontSize: "34px",
     },
   },
   big: {
     fontSize: "24px",
+    [mq.xsmall]: {
+      fontSize: "20px",
+    },
     [mq.large]: {
       fontSize: "39px",
     },
@@ -170,6 +216,9 @@ const Li = styled.li(
   {
     fontFamily: "Open Sans",
     fontSize: "16px",
+    [mq.xsmall]: {
+      fontSize: "14px",
+    },
     [mq.large]: {
       fontSize: "28px",
     },
@@ -254,6 +303,9 @@ const ptagStyle = {
     color: "#6c6b68",
     lineHeight: "normal",
     fontSize: "28px",
+    [mq.xsmall]: {
+      fontSize: "12px",
+    },
     [mq.large]: {
       fontSize: "52px",
     },
@@ -261,6 +313,9 @@ const ptagStyle = {
   title: {
     fontSize: "22px",
     fontWeight: "600",
+    [mq.xsmall]: {
+      fontSize: "20px",
+    },
     [mq.large]: {
       fontSize: "36px",
     },
@@ -270,6 +325,9 @@ const ptagStyle = {
     fontSize: "22px",
     fontWeight: "400",
     lineHeight: "1.26",
+    [mq.xsmall]: {
+      fontSize: "22px",
+    },
     [mq.large]: {
       fontSize: "38px",
     },
@@ -278,6 +336,9 @@ const ptagStyle = {
     color: "black",
     fontSize: "17px",
     lineHeight: "1.36",
+    [mq.xsmall]: {
+      fontSize: "18px",
+    },
     [mq.large]: {
       fontSize: "26px",
     },
@@ -318,7 +379,7 @@ const errorMessageVariants = {
 function ErrorMessage({ error, variant = "stacked", ...props }) {
   return (
     <div
-      role="alert"
+      role='alert'
       css={[{ color: colors.danger }, errorMessageVariants[variant]]}
       {...props}
     >
@@ -350,6 +411,16 @@ const CircleButton = styled.button({
   cursor: "pointer",
 });
 
+const Base = styled.div`
+  a {
+    white-space: nowrap;
+    margin-left: 7px;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 12px;
+  }
+`;
+
 export {
   CurrentStatus,
   ContentWrapper,
@@ -367,4 +438,5 @@ export {
   FormGroup,
   ErrorMessage,
   CircleButton,
+  Base,
 };

@@ -1,6 +1,6 @@
-# Getting Started with Reports App (React-Rechart.js)
+# Getting Started with Reports App
 
-This project was deployed at here.
+This project was deployed at here. [React-Rechart Report App](https://react-rechart.netlify.app/).
 
 ## Available Scripts
 

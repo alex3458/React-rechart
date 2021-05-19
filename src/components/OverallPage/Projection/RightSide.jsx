@@ -39,56 +39,56 @@ const Predictive = (props) => {
   const keys = props.keys;
   const gaps = props.gaps;
   const keyItems = keys.map((key, index) => (
-    <Li variant="key" key={index}>
+    <Li variant='key' key={index}>
       <Circle color={index} />
       {key}
     </Li>
   ));
   const gapItems = gaps.map((gap, index) => (
-    <Li variant="gap" key={index}>
+    <Li variant='gap' key={index}>
       {gap}
     </Li>
   ));
   return (
-    <div className="col-lg-6">
-      <FlexContainer column justify="space-around" className="h-100">
-        <FlexContainer justify="space-between">
-          <ValueHeader size="small">
-            <i className="material-icons">highlight</i>Key Predictive Drivers
+    <div className='col-lg-6'>
+      <FlexContainer column justify='space-around' className='h-100'>
+        <FlexContainer justify='space-between'>
+          <ValueHeader size='small'>
+            <i className='material-icons'>highlight</i>Key Predictive Drivers
           </ValueHeader>
-          <ValueHeader size="small">Impact on gap</ValueHeader>
+          <ValueHeader size='small'>Impact on gap</ValueHeader>
         </FlexContainer>
-        <FlexContainer justify="space-between" align="center">
-          <ResponsiveContainer width="25%" height={188}>
+        <FlexContainer justify='space-between' align='center'>
+          <ResponsiveContainer width='30%' height={200}>
             <PieChart>
               <Pie
                 data={dataPie}
-                nameKey="name"
-                dataKey="value"
-                innerRadius="70%"
-                outerRadius="100%"
+                nameKey='name'
+                dataKey='value'
+                innerRadius='70%'
+                outerRadius='100%'
               >
                 {dataPie.map((entry, index) => (
                   <Cell key={entry.name} fill={COLORS[index % COLORS.length]} />
                 ))}
                 <Label
-                  value="-214"
-                  position="centerBottom"
-                  className="label-top"
-                  fill="#f22736"
+                  value='-214'
+                  position='centerBottom'
+                  className='label-top'
+                  fill='#f22736'
                 />
                 <Label
-                  value="Gap"
-                  position="centerTop"
-                  className="label-bottom"
-                  fill="#f22736"
+                  value='Gap'
+                  position='centerTop'
+                  className='label-bottom'
+                  fill='#f22736'
                 />
                 <Tooltip />
               </Pie>
             </PieChart>
           </ResponsiveContainer>
 
-          <FlexContainer justify="space-between" className="w-100">
+          <FlexContainer justify='space-between' className='w-100'>
             <ul>{keyItems}</ul>
             <ul>{gapItems}</ul>
           </FlexContainer>

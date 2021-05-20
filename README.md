@@ -2,6 +2,10 @@
 
 This project was deployed at here. [React-Rechart Report App](https://react-rechart.netlify.app/).
 
+Username: Alek
+Password: admin
+
+
 ## Available Scripts
 
 Install node modules:
